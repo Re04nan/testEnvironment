@@ -26,19 +26,29 @@ const App = () => {
     async function upCadastro(event){
         event.preventDefault();
 
-        await API.post('/Cadastro.php', cadastro)
-        .then((response) => {
-            console.log(response.data.sucess);
-            setMsg(response.data.sucess);
+        let campo2 = document.getElementById("confirmeSenha").value;
+        let campo1 = document.getElementById("senha").value;
+        if(campo2 === campo1){
+            await API.post('/Cadastro.php', cadastro)
+            .then((response) => {
+                console.log(response.data.sucess);
+                setMsg(response.data.sucess);
 
+                setTimeout(()=>{
+                    setMsg(true);
+                }, 3000);
+
+                document.getElementById("nome").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("senha").value = "";
+                document.getElementById("confirmeSenha").value = "";
+            })   
+        } else{
+            setMsg(false);
             setTimeout(()=>{
                 setMsg(true);
             }, 3000);
-
-            document.getElementById("nome").value = "";
-            document.getElementById("email").value = "";
-            document.getElementById("senha").value = "";
-        })   
+        }
     }
 
     const controleLogin = (event) => {
@@ -70,7 +80,9 @@ const App = () => {
                             <label htmlFor="email">E-mail:</label><br/>
                             <input onChange={controleCadastro} type="email" name="email" id="email"></input><br/>
                             <label htmlFor="senha">Senha:</label><br/>
-                            <input onChange={controleCadastro} type="password" name="senha" id="senha"></input><br/><br/>
+                            <input onChange={controleCadastro} type="password" name="senha" id="senha"></input><br/>
+                            <label htmlFor="confirmeSenha">Confirmar Senha:</label><br/>
+                            <input onChange={controleLogin} type="password" name="confirmeSenha" id="confirmeSenha"></input><br/><br/>
                             <button className="btn btn-success">Cadastrar</button>
                             <button type="reset" className="btn btn-success m-2">Limpar</button>
                     </fieldset>
@@ -89,9 +101,11 @@ const App = () => {
                             <input onChange={controleLogin} type="text" name="nome" id="nome"></input><br/>
                             <label htmlFor="senha">Senha:</label><br/>
                             <input onChange={controleLogin} type="password" name="senha" id="senha"></input><br/><br/>
-                            <button className="btn btn-success">
-                             { entrar && <Link to="/Menu" Style="color: white; text-decoretion: none;">Jogar</Link>}
-                            </button>
+                            {
+                               entrar?<button className="btn btn-success"><Link to='/Menu'>Jogar</Link></button>:
+                               <button className="btn btn-success">Jogar</button>
+                            } 
+                            
                     </fieldset>
                 </form>
             </main>
