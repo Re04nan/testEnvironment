@@ -7,7 +7,7 @@ const Routes = () => {
     return(
         <Switch>
             <Route path="/" component={App} exact/>
-            <Route path="/Menu" component={Menu}/>
+            <Route path="/Menu/:id/" component={Menu}/>
             <Route component={() => <div>Page Error 404!</div>}/>
         </Switch>
     );
