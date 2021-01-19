@@ -3,16 +3,18 @@
 header("Access-Control-Allow-Origin:*");
 header("Content-type: application/json");
 
-require "./Models/Crud.php";
+    require "Connection.php";
+    $user = (int) $_GET['id'];
 
-$apagar = new Crud;
+    if(isset($user) && !empty($user)){
+        $sql2 = $conn->query("DELETE cadastro, modulo FROM cadastro INNER JOIN modulo 
+        ON cadastro.id_user = modulo.fk_user WHERE cadastro.id_user = '$user'");
 
-$apagar->id = $_POST['id'];
+        $sql = $conn->query("DELETE FROM cadastro WHERE id_user = '$user'");
 
-$verifica = $apagar->getRemover();
-
-if ($verifica == true) {
-    echo json_encode(true);
-} else {
-    echo json_encode(false);
-}
+        $result = true;
+        
+    } else {
+        $result = false;
+    }
+    echo json_encode(["sucess"=> $result]);

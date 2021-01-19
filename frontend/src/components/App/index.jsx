@@ -1,9 +1,11 @@
 import {React, useState} from 'react';
 import {Link} from 'react-router-dom';
 import API from '../../axios/Api';
+import './styles.css';
 
 const App = () => {
-    const [msg, setMsg] = useState(true);
+    const [msg, setMsg] = useState("");
+    const [user, setUser] = useState("");
     const [entrar, setEntrar] = useState(false);
     const [cadastro, setCadastro] = useState({
         nome: "",
@@ -31,22 +33,29 @@ const App = () => {
         if(campo2 === campo1){
             await API.post('/Cadastro.php', cadastro)
             .then((response) => {
-                console.log(response.data.sucess);
-                setMsg(response.data.sucess);
+                const send = response.data.sucess;
+               
+                if(send === true){
+                    setMsg("Conta criada com sucesso!")
+                    setTimeout(()=>{
+                        setMsg("");
+                    }, 3000);
 
-                setTimeout(()=>{
-                    setMsg(true);
-                }, 3000);
-
-                document.getElementById("nome").value = "";
-                document.getElementById("email").value = "";
-                document.getElementById("senha").value = "";
-                document.getElementById("confirmeSenha").value = "";
+                    document.getElementById("nome").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("senha").value = "";
+                    document.getElementById("confirmeSenha").value = "";
+                } else {
+                    setMsg("Erro, tente novamente ou entre em contato!")
+                    setTimeout(()=>{
+                    setMsg("");
+                    }, 3000);
+                }
             })   
         } else{
-            setMsg(false);
+            setMsg("A senha informada nos campos não são iguais!");
             setTimeout(()=>{
-                setMsg(true);
+                setMsg("");
             }, 3000);
         }
     }
@@ -64,14 +73,13 @@ const App = () => {
         await API.post('/Login.php', login)
         .then((response) => { 
             setEntrar(response.data.sucess);
-            console.log(entrar);
-            console.log(response.data.id);
+            setUser(response.data.id.id_user);
         })
     }
 
     return (
         <>
-            <main Style="display: flex; justify-content: space-around;">
+            <main>
                 <form onSubmit={upCadastro} className="m-4">
                     <fieldset>
                         <legend>Cadastro</legend>
@@ -87,13 +95,7 @@ const App = () => {
                             <button type="reset" className="btn btn-success m-2">Limpar</button>
                     </fieldset>
                 </form>
-                
-                { 
-                    !msg && <div className="alert alert-danger mx-auto mt-4 w-75" role="alert">
-                    Erro para Cadastrar
-                    </div>
-                }
-
+                <strong>{msg}</strong>
                 <form onSubmit={upLogin} className="m-4">
                     <fieldset>
                         <legend>Login</legend>
@@ -102,7 +104,7 @@ const App = () => {
                             <label htmlFor="senha">Senha:</label><br/>
                             <input onChange={controleLogin} type="password" name="senha" id="senha"></input><br/><br/>
                             {
-                               entrar?<button className="btn btn-success"><Link to='/Menu'>Jogar</Link></button>:
+                               entrar?<button className="btn btn-success"><Link to={`/Menu/${user}`}>Jogar</Link></button>:
                                <button className="btn btn-success">Jogar</button>
                             } 
                             
