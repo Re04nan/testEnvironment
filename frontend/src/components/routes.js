@@ -2,9 +2,9 @@ import React from 'react';
 import Index from './App';
 import Login from './Login';
 import Cadastro from './Cadastro';
-import AlterarSenha from '../pages/AlterarSenha';
-import Ajustes from '../pages/Ajustes';
-import Niveis from '../pages/Niveis';
+import AlterarSenha from './AlterarSenha';
+import Ajustes from './Ajustes';
+import Niveis from './Niveis';
 import { Switch, Route} from 'react-router-dom';
 
 const Routes = () => {
