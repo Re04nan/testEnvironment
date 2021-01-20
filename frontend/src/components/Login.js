@@ -6,14 +6,15 @@ import { Link } from 'react-router-dom';
 
 import '../components/css/Login.css';
 import '../components/css/colmeia.css';
-import '../components/css/Fundo.css';
+import '../components/css/Global.css';
 
 const Login = () =>{
     return(
         <>
+            <main id="cor-de-fundo">
             <Nav/>
             <div id="conte1" className="container">
-                <div id="cor-de-fundo" className="row justify-content-center pt-4">
+                <div className="row justify-content-center pt-4">
                     <form>
                         <label id="container-titulo">LOGIN</label>
 
@@ -35,10 +36,10 @@ const Login = () =>{
                     </form>
                 </div>
             </div>
-
                 <div className="fixed-bottom mb-5">
                     <img className="ml-5" id="abelhinha" src={abelha}/>
                 </div>
+            </main>
             <Rodape/>
         </>
     )
