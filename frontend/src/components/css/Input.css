@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+#input-menor {
+    background-color: palevioletred;
+    width: 220px;
+    height: 40px;
+    margin-left: 30px;
+}
+
+#input-maior {
+    background-color: palevioletred;
+    width: 400px;
+    height: 40px;
+    margin-left: 30px;
+}
+
+placeholder {
+    color: white;
+     font-family: 'Paytone One', sans-serif;
+}
+
+

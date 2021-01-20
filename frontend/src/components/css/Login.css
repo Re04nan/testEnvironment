@@ -1,0 +1,78 @@
+#EMP img{
+    transform: rotate(-10deg);
+    animation-name: pulsar;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulsar{
+    0% {
+        width: 370px;
+    }
+    50%{
+        width: 320px;
+    }
+    100%{
+        width: 370px;
+    }
+}
+
+#conte1{
+    padding-top: 30px;
+    width: 450px;
+    height: 800px;
+    background: #FFC107;
+    text-align: center;
+    font-family: 'Paytone One', sans-serif;
+    color: white;
+    font-size: 50px;
+    border-radius: 40px 40px 0 0;
+}
+#InpL{
+    background: #5FD8FF;;
+    width: 300px;
+    height: 50px;
+    font-family: 'Paytone One', sans-serif;
+    border-radius: 5px;
+    outline: none;
+    text-align: center; 
+    font-size: 18px;
+    color: white;
+    border: none;
+}
+#mark-ativo{
+    cursor: pointer;
+}
+#clique-aqui {
+    color: white;
+    font-size: 20px;
+    text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.445);
+}
+.aqui:hover {
+    color: #B24BE2;
+    cursor: pointer;
+}
+
+#manter-conectado {
+    cursor: pointer;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.445);
+}
+
+
+@media (max-width: 1038px){
+    #EMP img{
+        display: none;
+    }
+}
+
+@media (max-width: 768px){
+  #EMP img{
+      display: none;
+  }
+}
+
+@media (max-width: 525px){
+  
+}
