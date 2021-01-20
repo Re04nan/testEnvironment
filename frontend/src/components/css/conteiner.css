@@ -185,6 +185,22 @@ input[type=checkbox] {
     box-shadow: 1px 3px rgba(0, 0, 0, 0.445);;    
 }
 
+#btnE{
+    margin-top: 30px;
+    width: 250px;
+    background: red;
+    color: #ffff;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 20px;
+    border-radius: 15px;
+    padding-left: 2vh;
+    box-sizing: border-box;
+    box-shadow: 1px 3px rgba(0, 0, 0, 0.445);;    
+}
+#btnE:hover{
+    box-shadow: 4px 4px #469bb8;
+}
+
 @media (max-width: 1440px){
     #Cadastro{
         width: 450px;
