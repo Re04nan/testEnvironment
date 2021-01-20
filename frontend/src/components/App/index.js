@@ -1,14 +1,14 @@
 import React from "react";
-import '../components/css/home.css'
-import '../components/css/botao.css';
-import '../components/css/conteiner.css'
-import Nav from './nav';
-import Rodape from '../components/Rodape';
-import Img from '../components/imagens/eumeprotejo.png'
-import abelha from '../components/imagens/abelhass.png';
+import './styles.css'
+import '../css/botao.css';
+import '../css/conteiner.css'
+import Nav from '../Menu';
+import Rodape from '../Rodape';
+import Img from '../imagens/eumeprotejo.png'
+import abelha from '../imagens/abelhass.png';
 
 
-const Home = () =>{
+const Index = () =>{
     return(
     <div>
         <div className="App" id="cor-de-fundo">
@@ -50,10 +50,4 @@ const Home = () =>{
     )
 }
 
-export default Home;
-
-/*
- return(
-    
-    )
-*/
+export default Index;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav  from './nav'
+import Nav  from '../components/Menu'
 import Rodape from '../components/Rodape';
 import Ajuste  from '../components/Ajustes';
 import abelha from '../components/imagens/abelhass.png';

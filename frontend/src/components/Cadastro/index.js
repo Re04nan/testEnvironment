@@ -1,12 +1,12 @@
 import React from 'react';
-import Nav from '../pages/nav';
-import Rodape from './Rodape';
-import abelha from './imagens/abelhass.png';
+import Nav from '../Menu';
+import Rodape from '../Rodape';
+import abelha from '../imagens/abelhass.png';
 
-import '../components/css/colmeia.css';
-import './css/Global.css';
-import './css/Cadastro.css';
-import './css/botao.css';
+import '../css/colmeia.css';
+import '../css/global.css';
+import './styles.css';
+import '../css/botao.css';
 
  const Cadastro = () => {
 
@@ -15,7 +15,7 @@ import './css/botao.css';
             <main id="cor-de-fundo">
                     <Nav/>
                     <div id="Cadastro" className="container">
-                        <div id="teste" className="row justify-content-center pt-4">
+                        <div className="row justify-content-center pt-4">
                             <form>
                                 <label id="titulo">CADASTRAR</label>
                                     <input id="InpC" type="text" className="mt-4" name="usuario" placeholder="NOME DE USUÁRIO"></input>

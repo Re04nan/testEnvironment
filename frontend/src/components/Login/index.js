@@ -1,12 +1,12 @@
 import React from 'react';
-import Nav from '../pages/nav';
-import Rodape from './Rodape';
-import abelha from './imagens/abelhass.png';
+import Nav from '../Menu';
+import Rodape from '../Rodape';
+import abelha from '../imagens/abelhass.png';
 import { Link } from 'react-router-dom';
 
-import '../components/css/Login.css';
-import '../components/css/colmeia.css';
-import '../components/css/Global.css';
+import './styles.css';
+import '../css/colmeia.css';
+import '../css/global.css';
 
 const Login = () =>{
     return(

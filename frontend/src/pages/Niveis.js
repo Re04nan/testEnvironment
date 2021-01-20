@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav  from './nav'
+import Nav  from '../components/Menu';
 import Rodape from '../components/Rodape';
 import Nivel  from '../components/Nivel';
 
