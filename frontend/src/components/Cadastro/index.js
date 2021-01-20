@@ -18,10 +18,10 @@ import '../css/botao.css';
                         <div className="row justify-content-center pt-4">
                             <form>
                                 <label id="titulo">CADASTRAR</label>
-                                    <input id="InpC" type="text" className="mt-4" name="usuario" placeholder="NOME DE USUÁRIO"></input>
-                                    <input id="InpC" type="text" className="mt-5" name="senha" placeholder="SENHA"></input>
-                                    <input id="InpC" type="text" className="mt-5" name="confirme" placeholder="CONFIRME A SENHA"></input>
-                                    <input id="InpC" type="text" className="mt-5" name="e-responsa" placeholder="E-MAIL DO RESPONSAVEL"></input>
+                                    <input id="InpC" type="text" className="mt-4" name="user" placeholder="NOME DE USUÁRIO" required></input>
+                                    <input id="InpC" type="password" className="mt-5" name="senha" placeholder="SENHA" required></input>
+                                    <input id="InpC" type="password" className="mt-5" name="confirme" placeholder="CONFIRME A SENHA" required></input>
+                                    <input id="InpC" type="email" className="mt-5" name="email" placeholder="E-MAIL DO RESPONSAVEL" required></input>
                                
                                 <div className="row justify-content-center mt-2">
                                     <button type="submit" className="btn" nome="CRIAR" id="btnC">CRIAR CONTA</button>

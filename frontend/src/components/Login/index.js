@@ -19,8 +19,8 @@ const Login = () =>{
                         <label id="container-titulo">LOGIN</label>
 
                         <div className="row justify-content-center">
-                            <input id="InpL" type="text" class="mt-5 row" name="exe" placeholder="NOME DE USUÁRIO" />
-                            <input id="InpL" type="text" class="mt-4" name="exe" placeholder="SENHA" />
+                            <input id="InpL" type="text" class="mt-5 row" name="user" placeholder="NOME DE USUÁRIO" required />
+                            <input id="InpL" type="password" class="mt-4" name="senha" placeholder="SENHA"  required/>
                         </div>
                         <div className="row justify-content-center">
                             <input type="checkbox" name="mark-ativo" value="mark-ativo" id="mark-ativo"/>
