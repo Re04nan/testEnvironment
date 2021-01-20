@@ -31,13 +31,13 @@ const Login = () =>{
                                 <i class="fas fa-play"/>
                             </button>
                         </div>
-                        <Link to="/Page2" id="clique-aqui" className="mt-4">NÃO TEM CADASTRO?
-                        <p id="aqui">CLIQUE AQUI</p></Link>
+                        <Link to="/Cadastro" id="clique-aqui" className="mt-4 aqui">NÃO TEM CADASTRO?</Link>
+                        <Link to="/AlterarSenha" className="aqui"><p>ESQUECEU A SENHA?</p></Link>
                     </form>
                 </div>
             </div>
                 <div className="fixed-bottom mb-5">
-                    <img className="ml-5" id="abelhinha" src={abelha}/>
+                    <img className="ml-5" alt="Bee" id="abelhinha" src={abelha}/>
                 </div>
             </main>
             <Rodape/>

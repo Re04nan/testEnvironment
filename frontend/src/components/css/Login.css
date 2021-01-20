@@ -43,12 +43,12 @@
 #mark-ativo{
     cursor: pointer;
 }
-#clique-aqui {
+#clique-aqui, .aqui {
     color: white;
     font-size: 20px;
     text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.445);
 }
-.aqui:hover {
+.aqui:hover, #clique-aqui:hover {
     color: #B24BE2;
     cursor: pointer;
 }

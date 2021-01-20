@@ -1,28 +1,41 @@
-import React, {Component} from 'react';
-import './css/botao.css';
-import {Input} from './container';
-import {Botao} from './botao'
-import './css/Cadastro.css';
+import React from 'react';
+import Nav from '../pages/nav';
+import Rodape from './Rodape';
+import abelha from './imagens/abelhass.png';
 
- class Cadastro extends Component {
-    render(){
+import '../components/css/colmeia.css';
+import './css/Global.css';
+import './css/Cadastro.css';
+import './css/botao.css';
+
+ const Cadastro = () => {
+
         return(
-            <div id="Cadastro" className="container">
-                <div className="row justify-content-center pt-4">
-                    <div id="titulo">CADASTRAR</div>
+        <>
+            <main id="cor-de-fundo">
+                    <Nav/>
+                    <div id="Cadastro" className="container">
+                        <div id="teste" className="row justify-content-center pt-4">
+                            <form>
+                                <label id="titulo">CADASTRAR</label>
+                                    <input id="InpC" type="text" className="mt-4" name="usuario" placeholder="NOME DE USUÁRIO"></input>
+                                    <input id="InpC" type="text" className="mt-5" name="senha" placeholder="SENHA"></input>
+                                    <input id="InpC" type="text" className="mt-5" name="confirme" placeholder="CONFIRME A SENHA"></input>
+                                    <input id="InpC" type="text" className="mt-5" name="e-responsa" placeholder="E-MAIL DO RESPONSAVEL"></input>
+                               
+                                <div className="row justify-content-center mt-2">
+                                    <button type="submit" className="btn" nome="CRIAR" id="btnC">CRIAR CONTA</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                <div className="fixed-bottom mb-5">
+                    <img className="ml-5" alt="Bee" id="abelhinha" src={abelha}/>
                 </div>
-                <div className="justify-content-center mt-4">
-                    <div><Input id="InpC" type="text" class="mt-4 text-center" name="usuario" place="NOME DE USUÁRIO"></Input></div>
-                    <div><Input id="InpC" type="text" class="mt-5 text-center" name="senha" place="SENHA"></Input></div>
-                    <div><Input id="InpC" type="text" class="mt-5 text-center" name="confirme" place="CONFIRME A SENHA"></Input></div>
-                    <div><Input id="InpC" type="text" class="mt-5 text-center" name="e-responsa" place="E-MAIL DO RESPONSAVEL"></Input></div>
-                </div>
-                <div className="row justify-content-center mt-2">
-                    <Botao type="submit" class="btn" nome="CRIAR" id="btnC"/>
-                </div>
-            </div>
+            </main>
+                <Rodape />
+        </>
         )
-    }
 }
 
 export default Cadastro;

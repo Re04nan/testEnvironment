@@ -1,49 +1,6 @@
 import React, { Component } from 'react';
 import '../components/css/conteiner.css'
-import {Botao} from './botao';
-import './css/botao.css';
 
-export class Input extends Component {
-    render(){
-        return(
-            <div className="container">
-                <div className="row justify-content-center">
-                    <input id={this.props.id} type={this.props.type} className={this.props.class} name={this.props.name} placeholder={this.props.place}/>
-                </div>
-            </div>
-            
-        )
-    }
-}
-
-/* faça as alterações aqui :) */
-export class Cadastro extends Component {
-    render(){
-        return(
-            <div id="Cadastro" className="container">
-                <div className="row justify-content-center pt-4">
-                    <div id="titulo">CRIAR CONTA</div>
-                </div>
-                {/*
-                css
-                ::-webkit-input-placeholder {
-                color: white;
-                font-family: 'Paytone One', sans-serif;
-            }
-            */ }
-                <div className="justify-content-center mt-4">
-                    <div><Input id="InpC" type="text" class="mt-4 row align-self-item-center" name="exe" place="NOME DE USUÁRIO"></Input></div>
-                    <div><Input id="InpC" type="text" class="mt-4 row" name="exe" place="SENHA"></Input></div>
-                    <div><Input id="InpC" type="text" class="mt-4 row" name="exe" place="CONFIRME A SENHA"></Input></div>
-                    <div><Input id="InpC" type="text" class="mt-4 row" name="exe" place="E-MAIL DO RESPONSAVEL"></Input></div>
-                </div>
-                <div className="row justify-content-center mt-2">
-                    <Botao type="submit" class="btn" nome="CRIAR" id="btnC"/>
-                </div>
-            </div>
-        )
-    }
-}
 /* Dentro de Ajustes siga o mesmo raciocinio dos outros componetes*/
 export class Ajuste extends Component {
     render(){
@@ -95,7 +52,7 @@ class Container extends Component {
         return(
             <div>
                 <div className="row justify-content-center">
-                    <div><Cadastro /></div>
+                    <div></div>
                 </div>
                 <div className="row justify-content-center">
                     <div><Ajuste /></div>

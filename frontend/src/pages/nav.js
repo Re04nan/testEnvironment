@@ -14,10 +14,10 @@ const Nav = () => {
                         <Link id="menu-texto" class="nav-link" to="/Login">LOGIN</Link>
                     </li>
                     <li class="nav-item">
-                        <Link id="menu-texto" class="nav-link" to="/Page2">CADASTRO</Link>
+                        <Link id="menu-texto" class="nav-link" to="/Cadastro">CADASTRO</Link>
                     </li>
                     <li class="nav-item">
-                        <Link id="menu-texto" class="nav-link" to="/Page3">MINHA PÁGINA</Link>
+                        <Link id="menu-texto" class="nav-link" to="/AlterarSenha">ALTERAR SENHA</Link>
                     </li>
                     <li class="nav-item">
                         <Link id="menu-texto" class="nav-link" to="/Ajustes">AJUSTES</Link>
